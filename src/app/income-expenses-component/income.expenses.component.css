@@ -1,0 +1,74 @@
+.container{
+    margin-top: 30px;;
+}
+
+.list-of-incomes{
+    justify-content: center;
+    display: flex;
+}
+
+.list-of-expenses{
+    justify-content: center;
+    display: flex;
+}
+
+.list-of-incomes h3{
+    color:#00cc86;
+    font-weight: bold;
+}
+
+.list-of-expenses h3{
+    color:red;
+    font-weight: bold;
+}
+
+.income-container, .expenses-container{
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    color: green;
+    min-height: 50px;
+    max-height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+.income-container div:nth-child(2), .expenses-container div:nth-child(2){
+    margin-left: auto;
+}
+
+.expenses-part{
+    border-radius: 5px;
+    background-color: #ffe5e3;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.incomes-part{
+    border-radius: 5px;
+    background-color:  #bafacd;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.delete-button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: black;
+    height: 25px;
+    width: 25px;;
+    border: 1px solid black;
+    right: -9px;
+    top: -9px;
+    color: red;
+    cursor: pointer;
+}
+
+.form-group .btn {
+    background-color: green;
+}

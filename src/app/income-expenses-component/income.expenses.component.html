@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 list-of-incomes">
+            <h3>INCOME</h3>
+        </div>
+        <div class="col-6 list-of-expenses">
+            <h3>EXPENSES</h3>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <ul class="list-group">
+                <li class="list-group-item income-container" (mouseenter)="mouseIsOverElement(income)"
+                    (click)="setCurrentId(income.id)" (mouseleave)="mouseLeftElement(income)"
+                    *ngFor="let income of listOfIncomes" [attr.data-item-id]="income.id" data-toggle="modal"
+                    data-target="#myModal">
+                    <div>
+                        <span>{{income.description}}</span>
+
+                    </div>
+                    <div class="incomes-part">
+                        <span>{{income.amount}}</span>
+                    </div>
+                    <div [@visibleInvisible]="income.isHovered ? 'visible' : 'invisible'"
+                        (click)="deleteElement(income.id,$event)" class="delete-button" #deleteButton>
+                        <span>X</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-6">
+
+            <ul class="list-group">
+                <li class="list-group-item expenses-container" style="color: red;"
+                    (mouseenter)="mouseIsOverElement(expenses)" (click)="setCurrentId(expenses.id)"
+                    (mouseleave)="mouseLeftElement(expenses)" *ngFor="let expenses of listOfExpenses"
+                    [attr.data-item-id]="expenses.id" data-toggle="modal" data-target="#myModal">
+                    <div>
+                        <span>{{expenses.description}}</span>
+                    </div>
+                    <div class="expenses-part">
+                        <span>{{expenses.amount}}</span>
+                    </div>
+                    <div [@visibleInvisible]="expenses.isHovered ? 'visible' : 'invisible'"
+                        (click)="deleteElement(expenses.id,$event)" class="delete-button" #deleteButton>
+                        <span>X</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Edit</h3>
+            </div>
+            <div class="modal-body">
+                <form class="row" autocomplete="off" data-current-element-id="-1" #myForm="ngForm"
+                    onkeypress="return event.key !='Enter'">
+                    <div class="form-group col-4">
+                        <input type="number" name="amount" class="form-control" placeholder="New Amount" required
+                            ngModel #amount="ngModel" />
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" name="description" class="form-control" placeholder="Description" required
+                            ngModel #description="ngModel" />
+                    </div>
+                    <div class="form-group col-2">
+                        <input type="submit" value="Save"
+                            (click)="editElement(myForm.value.amount,myForm.value.description,myForm)"
+                            [ngClass]="{'btn' : true, 'btn-primary' : true, 'disabled' : amount.invalid || description.invalid}" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

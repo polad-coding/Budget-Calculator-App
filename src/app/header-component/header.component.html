@@ -1,0 +1,6 @@
+<div class="row page-title">
+    <h3 class="text-center">BUDGET CALCULATOR</h3>
+</div>
+<div class="row total-amount-container">
+    <h1 [class]="{'white' : totalAmount == 0, 'red' : totalAmount < 0, 'green' : totalAmount > 0}">{{totalAmount}}</h1>
+</div>

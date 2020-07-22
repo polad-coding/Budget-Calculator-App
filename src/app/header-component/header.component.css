@@ -1,0 +1,25 @@
+.page-title{
+    min-height: 100px;
+    background: linear-gradient(75deg, rgb(214, 180, 247), rgb(173, 203, 231));
+    justify-content: center;
+    align-items: center;
+}
+
+.total-amount-container{
+    min-height: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 28, 41);;
+}
+
+.green{
+    color: lightgreen;
+}
+
+.red{
+    color: red;
+}
+
+.white{
+    color: white;
+}
