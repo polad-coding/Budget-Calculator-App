@@ -1,27 +1,28 @@
-# BudgetAngularApp
+# Budget Calculator App
+### Introduction
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+This project was my first experience with Angular framework.  During the development i have strengthen my knowledge in some areas of Angular, for example:
 
-## Development server
+1. I learned more about component's interaction between each other (**Input** and **Output** decorators, **EventEmitters**).
+2. Used on practice some Bindings and developed better confidence in this concept.
+3. Learned more about interaction with forms(**ngModels** and **ngForms**).
+4. Learned about Angular animations and how they work.  
+5. Became more familiar and confident with **TypeScript** syntax.
+6. Learned basic concepts of Bootstrap.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Project description
 
-## Code scaffolding
+The idea, **not code** (except colors), of this project was taken from YouTube channel **Devstackr**. The main concept is to have a calculator, where you can add the positive or negative amount of your month expenses, accompanied with the description and track what will be the final amount during some undefined period.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Among the functions of the application:
+1. **Add amount with the description:**
+<img src="./Gifs/Add-Remove-Amount.gif" />
 
-## Build
+2. **Edit amount or description:**
+<img src="./Gifs/Edit-Amount.gif" />
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+3. **Delete amount:**
+<img src="./Gifs/Delete-Amount.gif" />
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+###Epilogue
+Although the project was not very huge or challenging, i consolidated my existing knowledges and learned a lot of new aspects during the coding.
