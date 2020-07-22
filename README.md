@@ -24,5 +24,5 @@ Among the functions of the application:
 3. **Delete amount:**
 <img src="./Gifs/Delete-Amount.gif" />
 
-###Epilogue
+### Epilogue
 Although the project was not very huge or challenging, i consolidated my existing knowledges and learned a lot of new aspects during the coding.
